@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
+const geistMono =   Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
@@ -23,11 +24,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen flex items-center justify-center bg-layoutBg text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen flex flex-col items-center justify-center text-white`}
       >
-        {children}
+        <header className="w-full h-[75] bg-containerBg selft">
+          <ul className="gap-4 flex items-center justify-end h-full px-5">
+            <li>
+              <Link href="/">Categoria</Link>
+            </li>
+            <li>
+              <Link href="/produto">Produto</Link>
+            </li>
+          </ul>
+        </header>
+
+        <div className="w-full h-screen flex items-center justify-center bg-layoutBg">
+          {children}
+        </div>
       </body>
     </html>
   );

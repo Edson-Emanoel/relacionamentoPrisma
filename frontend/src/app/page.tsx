@@ -1,7 +1,7 @@
-import FormCategoria from "@/app/components/formCategoria"
+import Categoria from "@/app/categoria/page"
 
 export default function Home() {
   return (
-    <FormCategoria />
+    <Categoria />
   );
 }
