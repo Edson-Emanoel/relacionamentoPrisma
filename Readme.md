@@ -1,4 +1,4 @@
-## Como Ficou
+## Interface:
 
 * A tela de Cadastro
 <img src="./screens/Formulario.png" />
